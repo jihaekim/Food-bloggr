@@ -5,7 +5,6 @@ require './models/post.rb'
 require './models/user.rb'
 
 enable :sessions
-set :database, {adapter:"postgresql", database:"foodie"}
 
 get "/" do
 
