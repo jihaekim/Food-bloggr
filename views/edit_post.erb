@@ -1,0 +1,24 @@
+<div class="create-outer">
+<div class="create-div-outer">
+
+<div class="current-user">
+<div class="edit-user-icon"><i class="fas fa-user-circle user-icon"></i></div>
+<div><p><%=@user.firstname%> <%=@user.lastname%></p></div>
+</div>
+
+
+<form method="POST" action="/posts/<%=@current_post.id%>">
+    <input type="hidden" name="_method" value="PUT">
+
+    <div class="create-div-inner">
+
+    <div class="title-div"><textarea type="text" name="title" class="title"><%=@current_post.title%></textarea></div>
+    <div class="edit-img"><img src="<%=@current_post.photo_url%>"></div>
+    <div class="content-div"><textarea type="text" name="content" class="content"><%=@current_post.content%></textarea></div>
+    <div class="photo-div"><input type="text" name="photourl" class="photourl" value="<%=@current_post.photo_url%>"></div>
+    <div class="submit-div"><input type="submit" value="Edit Post"></div>
+
+   </div>
+</form>
+</div>
+</div>

@@ -1,0 +1,71 @@
+<div class="single-outer view-margin">
+<div class="single-div">
+
+
+<div class="single-edit-div">
+<div class="user-display-div view-user">
+    <i class="fas fa-user-circle"></i>
+    <%owner = @allusers.find(@current_post.user_id)%>
+    <p> <%=owner.firstname%> <%=owner.lastname%></p>
+</div>
+
+<%if session[:user_id] == @current_post.user_id%>
+
+<div class="dropdown-icon-div">
+<div class="dropdown edit-drop" >
+<a href="/posts/<%=@current_post.id%>/edit"><i class="far fa-edit"></i></a>
+<div class="drop-content drop-single">
+<div class="tooltip-single">edit</div>
+</div>
+</div>
+
+
+<div class="dropdown">
+
+<form method="POST" action="/posts/<%=@current_post.id%>">
+<input type="hidden" name="_method" value="DELETE">
+<button class="trash-btn"type="submit" name="DELETE" value="delete"><i class="far fa-trash-alt"></i></button>
+</form>
+
+<div class="drop-content drop-single"">
+<div class="tooltip-single">delete</div>
+</div>
+</div>
+</div>
+<%end%>
+
+</div>
+
+
+<div class="single-title" class="single-post"><h1><%=@current_post.title%></h1>
+<%time=@current_post.created_at%>
+<p class="date"><%=time.strftime("%F")%></p>
+</div>
+
+<div class="img-post-div" class="single-post"><img class="inside-img" src = "<%=@current_post.photo_url%>"></div>
+
+
+<div class="single-post single-content"><p><%=@current_post.content%></p></div>
+
+
+
+</div>
+</div>
+
+<div class="explore">
+<div><p>Explore Posts</p></div>
+<div><a href="/posts">See All</a></span></div>
+</div>
+<hr class="view-hr"/>
+
+<div class="display-posts-bottom">
+<% @few_posts.each do |each_post|%>
+  
+    <div class="card view-bottom">
+      <a href="/post/<%=each_post.id%>"><img class="card-img-top" src="<%=each_post.photo_url%>" alt="Card image cap"></a>
+      <div class="card-body">
+      <a href="/post/<%=each_post.id%>"><h5 class="card-title"><%=each_post.title%></h5></a>
+        </div>
+      </div>
+<%end%>
+</div>

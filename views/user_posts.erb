@@ -1,0 +1,26 @@
+<div class="horizontal-div">
+
+
+
+<% @user_posts.each do |single_post| %>
+
+  <div class="horizontal-card">
+  <div class="inner-card"><a href="/post/<%=single_post.id%>"><img class="img-horizontal" src="<%=single_post.photo_url%>" alt="Card image cap"></a></div>
+  <div class="card-body">
+     <div class="user-display-div">
+     <i class="fas fa-user-circle"></i>
+     <div class="name-date">
+     <p><%=@user.firstname%> <%= @user.lastname %></p>
+      <%time=single_post.created_at%>
+      <p class="date"><%=time.strftime("%F")%></p>
+      </div>
+     </div>
+    <h2 class="card-title"><%=single_post.title%></h2>
+
+    <p class="card-text"><%=single_post.content[0,300]%> <a href="/post/<%=single_post.id%>">Read More</a></p>
+  </div>
+  </div>
+
+  <%end%>
+
+</div>

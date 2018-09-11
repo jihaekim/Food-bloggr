@@ -1,0 +1,97 @@
+#signin-div{
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    #login{
+        margin-bottom: 2%;
+    }
+
+}
+
+#inner-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input-div{
+        margin: 4%;
+        width: 300px;
+        height: 45px;
+
+        input{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#login-btn{
+    background-color: #cfd5d6;
+}
+
+#login-btn:hover{
+    background-color: #c3c9c9;
+}
+
+#exit-div{
+    margin-left: auto;
+    width: 1.6%;
+    margin-top: 4%;
+    margin-right: 5%;
+
+    a{
+        text-decoration: none;
+        color:#666a6b;
+    }
+}
+
+#exit:hover{
+    color:black;
+}
+
+#signup-link{
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+
+// signup scss
+
+
+ #signup-div{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+
+    #signup{
+        margin-bottom: 2%;
+    }
+ }
+
+.input-area{
+    width: 300px;
+    height: 45px;
+    margin: 4%;
+    input{
+        width:100%;
+        height:100%;
+    }
+
+}
+
+#signup-btn{
+    background-color: #cfd5d6;
+}
+
+#signup-btn:hover{
+    background-color: #c3c9c9;
+}
+
+#member{
+    text-align: center;
+}

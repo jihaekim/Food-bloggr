@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dash of Salt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="/app.css" />
+    </head>
+    <body>
+
+
+
+    <div class="container" id="nav-div">
+        <div class="row">
+            <div class="col-sm" id="first-nav">
+                <div class="nav-inner">
+                <a href="/">HOME</a>
+                <a href="/">BLOG</a>
+                <a href="#">ABOUT</a>
+                </div>
+            </div> 
+
+            <div class="col-sm" id="second-nav">
+            <div><h1>DASH of SALT</h1></div>
+            </div>
+
+        <div class="col-sm" id="third-nav">
+        <div class="nav-inner">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <div>
+    <div id="main-div">
+    <img id="main-img" src="https://static.wixstatic.com/media/a487476686464aaf8212ff0c6439a50d.jpg/v1/crop/x_0,y_742,w_4687,h_1660/fill/w_940,h_333,al_c,q_80,usm_0.66_1.00_0.01/a487476686464aaf8212ff0c6439a50d.webp">
+    </div>
+    </div>
+
+
+<div id= "lowernav-div">
+
+    <div id="first-inner">
+        <a href="/posts">All Posts</a>
+        <a href="#">Quick & Easy</a>
+        <a href="#">Vegetarian</a>
+        <a href="#">Main course</a>
+    </div>
+
+<div id="second-inner">
+    <%if session[:user_id]%>
+
+    <div class="icon-nav-div">
+    <div><i class="far fa-bell"></i></div>
+
+
+    <div class="dropdown">
+    <a href="/create-post"><i class="fas fa-plus"></i></a>
+    <div class="drop-content">
+    <div class="tooltip">Create Post</div>
+    </div>
+    </div>
+
+    <div class="dropdown">
+    <i class="fas fa-user-circle user-icon"></i>
+    <div class="drop-content">
+    <a href="/user/<%=@user.id%>"><div class="nav-inner-div">My Posts</div></a>
+    <a href="/users/<%=@user.id%>/edit"><div class="nav-inner-div middle">Account Settings</div></a>
+    <a href="/sign-out"><div class="nav-inner-div middle">Logout</div></a>
+    </div>
+    </div>
+    
+    </div>
+
+
+    <%else%>
+    <a href="/sign-in"><div>Login / Sign Up</div></a>
+    <%end%>
+    </div>
+
+    </div>
+
+    <%=yield%>
+
+   
+    <div class="footer">
+    <div>&copy; by Dash of Salt created with Ruby HTML & CSS</div>
+    </div>
+
+
+
+    <script src="/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+    </body>
+    </html>

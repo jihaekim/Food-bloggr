@@ -1,0 +1,28 @@
+<div class="card-container">
+<div class="card-inner">
+
+
+<% @allposts.each do |single_post| %>
+
+  <div class="card">
+<a href="/post/<%=single_post.id%>"><img class="card-img-top" src="<%=single_post.photo_url%>" alt="Card image cap"></a>
+  <div class="card-body">
+  <div class="user-display-div">
+  <i class="fas fa-user-circle"></i>
+  <div class="name-date">
+      <%owner = @allusers.find(single_post.user_id)%>
+      <p class="main-name"> <%=owner.firstname%> <%=owner.lastname%></p>
+      <%time=single_post.created_at%>
+      <p class="date"><%=time.strftime("%F")%></p>
+      </div>
+  </div>
+    <h2 class="card-title"><a href="/post/<%=single_post.id%>"><%=single_post.title%></a></h2>
+    <p class="card-text"><%=single_post.content[0,300]%><a href="/post/<%=single_post.id%>"> Read More</a></p>
+  </div>
+  </div>
+
+  <%end%>
+
+
+</div>
+</div>

@@ -1,0 +1,46 @@
+<div id="horizontal-div">
+
+
+ <div class="horizontal-card">
+ <div class="inner-card"><img class="img-horizontal" src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4fa061122a5ce899fcb5454dae8dbe99&auto=format&fit=crop&w=750&q=80" alt="Card image cap"></div>
+ <div class="card-body">
+   <h5 class="card-title">Card title</h5>
+   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ </div>
+</div>
+
+<div class="horizontal-card">
+<div class="inner-card"><img class="img-horizontal" src="https://images.pexels.com/photos/821403/pexels-photo-821403.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap"></div>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+
+
+<div class="horizontal-card">
+<div class="inner-card"><img class="img-horizontal" src="https://images.pexels.com/photos/821403/pexels-photo-821403.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap"></div>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some</p>
+</div>
+</div>
+
+
+
+<% @allposts.limit(4).each do |single_post| %>
+
+  <div class="horizontal-card">
+  <div class="inner-card"><img class="img-horizontal" src="<%=single_post.photo_url%>" alt="Card image cap"></div>
+  <div class="card-body">
+    <h5 class="card-title"><a href="/post/<%=single_post.id%>"><%=single_post.title%></a></h5>
+    <p class="card-text"><%=single_post.content%></p>
+  </div>
+  </div>
+
+  <%end%>
+
+  <a class="all-btn" href="#">All Posts</a>
+
+
+</div>

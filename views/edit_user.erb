@@ -1,0 +1,36 @@
+<div id="account-outer">
+
+<div id="account-heading"><h3>Account Setting</h3></div>
+
+<div id="account-div">
+
+<div id="account-inner">
+<p id="update-title">Update Account</p>
+<hr/>
+<form method="POST" action="/users/<%= @current_user.id %>"> 
+
+<input type="hidden" name="_method" value="PUT">
+<div>
+<div class="form-label"><div class="label-div">Username</div><div class="edit-user-div"><input type="text" name="username" placeholder="username" value="<%= @current_user.username%>"></div></div>
+<div class="form-label"><div class="label-div"><p>Password </p></div><div class="edit-user-div"><input type="text" name="password"  placeholder="password" value="<%= @current_user.password %>"></div></div>  
+<div class="form-label"><div class="label-div"><p>First Name </p></div><div class="edit-user-div"><input type="text" name="firstname" placeholder="firstname" value="<%= @current_user.firstname%>"></div></div> 
+<div class="form-label"><div class="label-div"><p>Last Name </p></div><div class="edit-user-div"><input type="text" name="lastname" placeholder="lastname" value="<%= @current_user.lastname%>"></div></div> 
+<div class="form-label"><div class="label-div"><p>Birthday </p></div><div class="edit-user-div"><input type="text" name="birthday" placeholder="birthday" value="<%= @current_user.birthday%>"></div></div> 
+<div class="form-label"><div class="label-div"><p>Email </p></div><div class="edit-user-div"><input type="text" name="email" placeholder="email" value="<%= @current_user.email%>"></div></div>
+<div id="user-submit-div"class="form-label"><div class="label-div"><input class="input-btn" type="submit" value="Submit"></div></div>
+</div>
+</form>
+
+</div>
+
+</div>
+
+<div id="deactivate-div">
+<p>Deactivate Account</p>
+<hr/>
+<form method="POST" action="/users/<%= @current_user.id %>">
+<input type="hidden" name="_method" value="DELETE">
+<input class="input-btn" type="submit" value="Delete Account">
+</form>
+</div>
+</div>
