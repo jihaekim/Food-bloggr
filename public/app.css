@@ -207,7 +207,8 @@ body {
     height: 100%; }
   .create-div-inner textarea {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    border-color: #b9bfbf; }
   .create-div-inner div {
     margin: 20px; }
 
