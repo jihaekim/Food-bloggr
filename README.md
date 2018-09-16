@@ -1,5 +1,5 @@
 # Food Blog
-Full stack blog application that allows users to share information about a particular topic. Users are able to create posts to share photos, write blog posts, as well as edit and delete the posts.
+Full stack blog application that allows users to share information about a particular topic. Users are able to create posts to share photos, write blog posts, edit and delete the posts.
 <img src="/images/foodblog-screenshot.png">
 
 <h4>Features</h4>
